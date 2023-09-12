@@ -25,27 +25,28 @@
         $num2 = $_POST["num2"];
         $calculation = $_POST["calculation"];
     
-    if($calculation==addition){
+    if($calculation=="addition"){
         $result = $num1 + $num2;
         echo "Result: $result";
     }
-    elseif($calculation==subtraction){
+    elseif($calculation=="subtraction"){
         $result = $num1 - $num2;
         echo "Result: $result";
     }
-    elseif($calculation==multiplication){
+    elseif($calculation=="multiplication"){
         $result = $num1 * $num2;
         echo "Result: $result";
     }
     else{
+        if($num2!=0){
         $result = $num1 / $num2;
-        if($num2==0)
-        echo "Result: No result";
+        echo "Result: $result";
+        }
         else{
-        echo "Result: $result";   
+        echo "Result: No result";
         }
     }
-}
+    }
     ?>
 </body>
 </html>
