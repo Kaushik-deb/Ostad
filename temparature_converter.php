@@ -21,7 +21,7 @@
         <div id="result">
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $num1 = $_POST["temp"];
+                $temp = $_POST["temp"];
                 $operation = $_POST["operation"];
 
                 switch ($operation) {
